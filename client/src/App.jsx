@@ -23,7 +23,7 @@ const App = () => {
 
   const handleSubmit = async () => {
     try {
-      const res = await axios.post('http://localhost:3001/api/endpoint', {
+      const res = await axios.post('https://data_filter.vercel.app/api/bfhl', {
         jsonInput,
         filters: selectedFilter,
       });
