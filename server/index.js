@@ -1,10 +1,15 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["data-filter-3udc-2yo5r7evb-kelvin-j-anils-projects.vercel.app/"],
+    methods:["POST","GET"]
+  }
+));
 app.use(express.json());
 
-app.post('/api/endpoint', (req, res) => {
+app.post('/api/bfhl', (req, res) => {
   const { jsonInput, filters } = req.body;
 
   let data;
